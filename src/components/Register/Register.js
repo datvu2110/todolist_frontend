@@ -51,7 +51,7 @@ class Register extends React.Component {
     })
       .then(response => response.json())
       .then(user => {
-        if(user.id){
+        if(user.id && user.password){
           this.props.loadUser(user)
           this.props.onRouteChange('home')
         }
@@ -122,7 +122,7 @@ class Register extends React.Component {
         </main>
       </article>
       <Alert variant="info" show={this.state.visible} >
-         The email is not valid!!!!
+         Cannot register a new user
       </Alert>
       </div>
     );
