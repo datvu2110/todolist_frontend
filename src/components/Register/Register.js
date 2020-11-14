@@ -122,7 +122,7 @@ class Register extends React.Component {
         </main>
       </article>
       <Alert variant="info" show={this.state.visible} >
-         Cannot register a new user
+         Cannot register a new user!
       </Alert>
       </div>
     );
