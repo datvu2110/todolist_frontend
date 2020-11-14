@@ -52,6 +52,8 @@ class Register extends React.Component {
       .then(response => response.json())
       .then(user => {
         if(user.id && user.password){
+          console.log('here')
+          console.log(user.password)
           this.props.loadUser(user)
           this.props.onRouteChange('home')
         }
