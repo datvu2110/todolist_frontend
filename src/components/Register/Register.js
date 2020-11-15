@@ -40,7 +40,7 @@ class Register extends React.Component {
   onSubmitSignIn = () =>{
     let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     if ( re.test(this.state.email) && this.state.password){
-      fetch('https://desolate-waters-84729.herokuapp.com/register', {
+      fetch('http://desolate-waters-84729.herokuapp.com/register', {
       
       method:'post',
       headers:{'Content-Type' : 'application/json'},
