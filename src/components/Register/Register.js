@@ -38,9 +38,11 @@ class Register extends React.Component {
   }
 
   onSubmitSignIn = () =>{
+    var proxyUrl = 'https://cors-anywhere.herokuapp.com/',
+    targetUrl = 'http://desolate-waters-84729.herokuapp.com/register'
     let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     if ( re.test(this.state.email) && this.state.password){
-      fetch('http://desolate-waters-84729.herokuapp.com/register', {
+      fetch(proxyUrl + targetUrl, {
       
       method:'post',
       headers:{'Content-Type' : 'application/json'},
