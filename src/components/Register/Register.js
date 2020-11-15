@@ -39,8 +39,9 @@ class Register extends React.Component {
 
   onSubmitSignIn = () =>{
     let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    if ( re.test(this.state.email) ){
+    if ( re.test(this.state.email) && this.state.password){
       fetch('https://desolate-waters-84729.herokuapp.com/register', {
+      
       method:'post',
       headers:{'Content-Type' : 'application/json'},
       body:JSON.stringify({
@@ -51,9 +52,10 @@ class Register extends React.Component {
     })
       .then(response => response.json())
       .then(user => {
-        if(user.id && user.password){
+        if(user.id){
+          
           console.log('here')
-          console.log(user.password)
+          console.log(this.state.password)
           this.props.loadUser(user)
           this.props.onRouteChange('home')
         }
@@ -108,7 +110,7 @@ class Register extends React.Component {
                   name="password"
                   id="password"
                   onChange={this.onPasswordChange}
-                  
+                  required
                 />
               </div>
             </fieldset>
