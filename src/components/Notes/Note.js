@@ -37,12 +37,13 @@ class Note extends React.Component {
 
         return(
             <div className="form">
+                <h4 className="header">What's the Plan for Today, {this.props.info.name}?</h4>
                 <header>
                     {/* <div>{this.props.info.id}</div> */}
                     <form id="to-do-form" onSubmit={this.submitForm}>
                         <input 
                             type="text" 
-                            placeholder="Enter Text" 
+                            placeholder="Enter Task" 
                             value={this.state.currentItem.todo}
                             onChange={this.handleInput}
                             maxLength="15"

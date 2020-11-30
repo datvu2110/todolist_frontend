@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Texturina:ital,wght@1,100&display=swap');
 .form{
     background-color: #3f3160;
     min-height: 500px;
     width:600px;
     margin: 30px auto;
     padding-bottom: 30px;
+   
 }
 
 #to-do-form input{
@@ -38,4 +40,10 @@
     .form{
         width: 400px;
     }
+}
+
+.header{
+    color: white;
+    font-family: 'Texturina', serif;
+
 }

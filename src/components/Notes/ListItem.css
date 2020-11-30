@@ -1,6 +1,6 @@
 .list {
     color: white;
-    background-color: #0FC3DE;
+    /* background-color: #0FC3DE; */
     width: 300px;
     height: 50px;
     margin: 20px auto;
@@ -13,10 +13,80 @@
     text-align:center;
    
 }
+.todo-row:nth-child(4n){
+    border-radius: 5px;
+    margin-left: 20%;
+    width: 60%;
+    background:linear-gradient(
+        90deg,
+        rgba(255,118,20,1) 0%,
+        rgba(255,84,17,1) 100%
+    )
+}
 
+
+.todo-row:nth-child(4n+1){
+    border-radius: 5px;
+    margin-left: 20%;
+    width: 60%;
+    background:linear-gradient(
+        90deg,
+        rgba(93,12,255,1) 0%,
+        rgba(155,0,250,1) 100%
+    )
+}
+.todo-row:nth-child(4n+2){
+    border-radius: 5px;
+    border-radius: 5px;
+    margin-left: 20%;
+    width: 60%;
+    background:linear-gradient(
+        90deg,
+        rgba(255,12,241,1) 0%,
+        rgba(250,0,135,1) 100%
+    )
+}
+
+.todo-row:nth-child(4n+3){
+    border-radius: 5px;
+    border-radius: 5px;
+    margin-left: 20%;
+    width: 60%;
+    background:linear-gradient(
+        90deg,
+        rgba(20,159,255,1) 0%,
+        rgba(17,122,255,1) 100%
+    )
+}
 
 img{
     cursor: pointer;
     margin-left: 10px;
     margin-right: 10px;
+}
+
+.button{
+    background-color: none;
+    border-radius: 5px;
+}
+
+
+@media screen and (max-width:600px){
+    .todo-row:nth-child(4n+1){
+        width: 100%;
+        margin: 0%;
+    }
+    .todo-row:nth-child(4n){
+        width: 100%;
+        margin: 0%;
+    }
+    .todo-row:nth-child(4n+2){
+        width: 100%;
+        margin: 0%;
+    }
+    .todo-row:nth-child(4n+3){
+        width: 100%;
+        margin: 0%;
+    }
+
 }

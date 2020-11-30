@@ -1,0 +1,8 @@
+input[type=search] { 
+	text-align: right;
+	cursor: pointer;
+	width: 20%; 
+	letter-spacing: 4px;        
+    text-shadow: 0 0 1px black;  
+    border-radius: 5px;
+}

@@ -1,0 +1,56 @@
+.transparent{
+    background-color: transparent;
+    width: 100%;
+    color: white;
+    height: 3em;
+    border-color: sandybrown;
+    border-radius: 5px;
+}
+
+.title{
+    font-size: 3em;
+}
+.padding{
+    padding: 2em
+}
+
+.frame {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	top:0;
+	left: 0;
+	right: 0;
+  	
+	margin: auto;
+}
+
+.password{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.signin{
+    margin-top: 10px;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 0;
+    margin-bottom: 1em;
+    font-weight: bold;
+    padding-right: 12px;
+    padding-left: 12px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.signin:hover {
+    transform: scale(1.1);
+    transition-timing-function: ease-in-out
+}
+
+.register{
+    font-weight: bold;
+}
+
+.register:hover {
+    transform: scale(1.1);
+}

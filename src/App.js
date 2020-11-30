@@ -6,6 +6,7 @@ import Navigation from './components/Navigation/Navigation'
 import Logo from './components/Logo/Logo'
 import Register from './components/Register/Register'
 import Note from './components/Notes/Note'
+import SearchBox from './components/Notes/SearchBox'
 
 const particlesOption={
   particles:{
@@ -37,8 +38,16 @@ class App extends Component {
       text:'',
       key:''
     },
-    items:[]
+    items:[],
+    searchfield:'',
 
+  }
+
+  onSearchChange = (e) =>{
+    this.setState({searchfield:e.target.value})
+    const filteredRobots = this.state.items.filter(item => {
+      return item.todo.toLowerCase().includes(this.state.searchfield.toLowerCase())
+    })
   }
 
   onShowAlert = () => {
@@ -177,15 +186,21 @@ class App extends Component {
   }
   
   render(){
+    
+    const filteredTodo = this.state.items.filter(item => {
+      return item.todo.toLowerCase().includes(this.state.searchfield.toLowerCase())
+    })
+
     return(
       <div className="App">
-        <Navigation isSignedIn={this.state.isSignedIn} onRouteChange={this.onRouteChange}/>
+        <Navigation info={this.state.user}  isSignedIn={this.state.isSignedIn} onRouteChange={this.onRouteChange}/>
         {this.state.route==='home'
           ? 
             <div>
-              <Logo />
+              <Logo updatePassword={this.updatePassword}/>
               <Particles params={particlesOption} className="particles" />
-              <Note   toggleComplete={this.toggleComplete} editItem={this.editItem} deleteItem={this.deleteItem} addItem={this.addItem} items={this.state.items} info={this.state.user} />
+              <SearchBox searchChange={this.onSearchChange} />
+              <Note toggleComplete={this.toggleComplete} editItem={this.editItem} deleteItem={this.deleteItem} addItem={this.addItem} items={filteredTodo} info={this.state.user} />
             </div>
           : (
             this.state.route === 'signin'
