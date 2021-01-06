@@ -11,7 +11,6 @@ class Note extends React.Component {
     }
 
     handleInput = (e) => {
-        console.log(e)
         this.setState({
             currentItem:{
                 todo:e.target.value,

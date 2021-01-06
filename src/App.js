@@ -21,8 +21,6 @@ const particlesOption={
 }
 
 
-
-
 class App extends Component {
 
   state = {
@@ -42,7 +40,7 @@ class App extends Component {
     searchfield:'',
 
   }
-
+  //Create a todo search
   onSearchChange = (e) =>{
     this.setState({searchfield:e.target.value})
     const filteredRobots = this.state.items.filter(item => {
@@ -57,6 +55,7 @@ class App extends Component {
     this.setState({alert:false})
   }
 
+  // Route user if the user signs in successfully
   loadUser = (data) =>{
     
     var obj
@@ -75,6 +74,7 @@ class App extends Component {
     
   }
 
+  // Route change whhen clicking signout or register
   onRouteChange = (route) =>{
     if (route === 'signout'){
       this.setState({isSignedIn:false})
@@ -84,7 +84,7 @@ class App extends Component {
     this.setState({route : route})
   }
 
-
+  // Call the addItem API
   addItem = (item, id) =>  {
     if (item.todo !== ""){
       fetch('https://desolate-waters-84729.herokuapp.com/add/' + id, {
@@ -106,6 +106,7 @@ class App extends Component {
 
   }
 
+  // Call editItem API
   editItem = (todo, id)=>{
     
     fetch('https://desolate-waters-84729.herokuapp.com/todo/' + id, {
@@ -116,7 +117,6 @@ class App extends Component {
         })
       })
       .then(res => {
-        console.log(id)
         const editedItems = this.state.items
         for (let i= 0; i< editedItems.length; i++){
           if(editedItems[i].noteid == id){
@@ -127,6 +127,7 @@ class App extends Component {
       })
   }
 
+  //Remove a todo
   deleteItem = (key) =>{
     fetch('https://desolate-waters-84729.herokuapp.com/todo/' + key, {
       method:'delete',
@@ -141,9 +142,9 @@ class App extends Component {
     })
   }
 
+  //Toggle todo if it is completed
   toggleComplete = (item) => {
 
-    console.log(item)
 
     if (item.done != 0){
       fetch('https://desolate-waters-84729.herokuapp.com/toggle/' + item.noteid, {

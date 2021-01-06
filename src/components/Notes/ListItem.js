@@ -16,16 +16,15 @@ class ListItem extends React.Component{
     }
 
     handleModal =(id) =>{
-        this.setState({show:true});
-        this.setCurrentId(id);      
+        this.setState({show:true})
+        this.setCurrentId(id)
     }
 
     setCurrentId = (id) => {
-        this.setState({currentNoteID: id});
+        this.setState({currentNoteID: id})
     }
     handleClose = () => { 
-        this.setState({ show: false,alert:false });
-        //console.log("show : " +this.props.show);
+        this.setState({ show: false,alert:false })
     }
 
     showAlert =() =>{
@@ -52,7 +51,7 @@ class ListItem extends React.Component{
                                 
                                 <ModalItem editItem={this.props.editItem} showAlert={this.showAlert} alert={this.state.alert} show = {this.state.show} itemid={this.state.currentNoteID} handleClose = {this.handleClose} editItem={this.props.editItem} />
                                 
-                                <img onClick={()=> this.props.deleteItem(item.noteid)} src="https://img.icons8.com/fluent-systems-regular/24/000000/trash.png" height="20" />
+                                <img onClick={()=> this.props.deleteItem(item.noteid)} alt="trash-icon" src="https://img.icons8.com/fluent-systems-regular/24/000000/trash.png" height="20" />
                             </div>
                         </div>
                     </div>

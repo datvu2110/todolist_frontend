@@ -39,7 +39,7 @@ class Register extends React.Component {
   }
 
 
-
+  // Submit sign in if the username and password are not null
   onSubmitSignIn = () =>{
     let tempEmail = this.state.email
     let tempPassword = this.state.password
@@ -79,42 +79,6 @@ class Register extends React.Component {
     else{
       this.onShowAlert()
     }
-
-    // fetch('https://desolate-waters-84729.herokuapp.com/users')
-    //   .then(res => res.json())
-    //   .then(res => {
-    //     let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    //     const checkEmail = obj => obj.email === tempEmail;
-    //     if(res.some(checkEmail)===false && re.test(tempEmail) && tempPassword) {
-    //       fetch('https://desolate-waters-84729.herokuapp.com/register', {
-      
-    //         method:'post',
-    //         headers:{'Content-Type' : 'application/json'},
-    //         body:JSON.stringify({
-    //           name:this.state.name,
-    //           email:this.state.email,
-    //           password:this.state.password
-    //         })
-    //       })
-    //       .then(response => response.json())
-    //       .then(user => {
-    //         if(user.id){
-              
-    //           console.log('here')
-    //           console.log(this.state.password)
-    //           this.props.loadUser(user)
-    //           this.props.onRouteChange('home')
-    //         }
-    //         else{
-    //           console.log(user)
-    //           this.onShowAlert()
-    //         }
-    //       })
-
-    //     } else {
-    //       this.onShowAlert()
-    //     }     
-    //   })
   }
    
 
