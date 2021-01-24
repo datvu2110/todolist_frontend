@@ -64,13 +64,10 @@ class Register extends React.Component {
         res.json()
       )
       .then(user =>{
-        if (user.id){
+       
           this.props.loadUser(user)
           this.props.onRouteChange('home')
-        }
-        else {
-          this.onShowAlert()
-        }
+       
       })
       .catch(error => {
         this.onShowAlert()

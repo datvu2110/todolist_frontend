@@ -9,11 +9,32 @@ import { Modal } from 'react-bootstrap'
 
 class Logo extends React.Component{
 
+    // state={
+    //     test: "abc",
+    //     different:123
+    // }
   
     render(){
         return(
             <div className="ma4 mt0">
-                
+                {/* <input 
+                    type="text" 
+                   
+                />
+                <input 
+                    type="text" 
+                   
+                />
+                <input 
+                    type="text" 
+                   
+                />
+                <input 
+                type="radio" 
+               
+                />
+                <p id="abc">Text</p> */}
+
                 <Tilt  className="Tilt br2 shadow-2" options={{ max : 55 }} style={{ height: 150, width: 150 }} >
                     <div className="Tilt-inner pa3"><img style={{paddingTop:'5px'}} alt='logo' src={icon}/></div>
                 </Tilt>
