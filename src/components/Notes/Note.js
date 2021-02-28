@@ -1,6 +1,8 @@
 import React from 'react';
 import ListItem from './ListItem';
 import './Note.css'
+let JSAlert = require("js-alert")
+
 class Note extends React.Component {
     state={
         items:[],
@@ -22,13 +24,20 @@ class Note extends React.Component {
 
     submitForm = (e) => {
         e.preventDefault()
-        this.props.addItem(this.state.currentItem,this.props.info.id) 
-        this.setState({
-            currentItem:{
-                todo:"",
-                key:''
-            }
-        })
+
+        if (this.state.currentItem.todo === ""){
+            JSAlert.alert("Please enter a todo item")
+        } else{
+            this.props.addItem(this.state.currentItem,this.props.info.id) 
+            this.setState({
+                currentItem:{
+                    todo:"",
+                    key:''
+                }
+            })
+        }
+
+        
    
     }
     
