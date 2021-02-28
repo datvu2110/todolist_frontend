@@ -33,7 +33,7 @@ class ListItem extends React.Component{
 
     render(){
         let i = 0;
-        return <div>
+        return <div className="todoBox">
             {this.props.items.map((item,index) => {
                 i = i+ 1
                 return(

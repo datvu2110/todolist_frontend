@@ -137,6 +137,7 @@ class App extends Component {
       })
     })
     .then(data =>{
+      console.log("click")
       const filteredItems =  this.state.items.filter(item => item.noteid!== key)
       this.setState({items:filteredItems})
     })

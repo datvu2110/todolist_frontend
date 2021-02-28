@@ -36,7 +36,7 @@ class Note extends React.Component {
 
         return(
             <div className="form">
-                <h4 className="header">What's the Plan for Today, {this.props.info.name}?</h4>
+                <h4 className="header">What is the Plan for Today, {this.props.info.name}?</h4>
                 <header>
                     {/* <div>{this.props.info.id}</div> */}
                     <form id="to-do-form" onSubmit={this.submitForm}>

@@ -2,7 +2,9 @@ import React from 'react'
 import {Modal, Button, Row, Col, Form, Alert } from 'react-bootstrap'
 
 class ModalItem extends React.Component{
-    
+    constructor(props) {
+        super(props);
+    }
 
 
     handleSubmit = (e) => {
