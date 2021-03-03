@@ -20,7 +20,7 @@ That’s why the first step to organizing your work and life is getting everythi
 
 ## Quick App Demo
 
-![Imgur](https://imgur.com/7OxLgg1)
+![Imgur](https://i.imgur.com/7OxLgg1.gif)
 
 ## Technology
 
