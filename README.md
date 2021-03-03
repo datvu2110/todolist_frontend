@@ -1,68 +1,52 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# TodoList
+TodoList is a simple and intelligent to-do list that makes it easy to plan your day
 
-## Available Scripts
+This repo is the front-end client, built in React.  You can see the app live at [https://todolist2110.herokuapp.com/](https://todolist2110.herokuapp.com/)
 
-In the project directory, you can run:
+The app is meant for mobile use, but will still scale for desktop viewing.
 
-### `npm start`
+To check out the app, I suggest you create a dummy account so you can see the onboarding experience.  But, if you just want to view what a program looks like, you can use the demo account.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#### Demo Account Details
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+* email: vudat2110@gmail.com
+* password: secret
 
-### `npm test`
+## Introduction
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+It turns out, our brains are actually wired to keep us thinking about our unfinished tasks. Handy when you have one thing you need to work on. Not so good when you have 30+ tasks vying for your attention at once.
 
-### `npm run build`
+That’s why the first step to organizing your work and life is getting everything out of your head and onto your to-do list. From there you can begin to organize and prioritize so you know exactly what to focus on.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Quick App Demo
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+![](https://imgflip.com/gif/50aa6k)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Technology
 
-### `npm run eject`
+#### Front End
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+* React
+  * Create React App
+  * React Router
+* HTML5
+* CSS3
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Testing
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+* Jest
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### Production
 
-## Learn More
+* Deployed via Heroku
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Getting Started
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Run `npm install` to load dependencies
 
-### Code Splitting
+Run `npm test` to ensure a stable build
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+This is only the front end client, so develop locally you'll need the backend server as well.
 
-### Analyzing the Bundle Size
+To get the backend up and running see [https://github.com/datvu2110/new-backend](https://github.com/datvu2110/new-backend)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
