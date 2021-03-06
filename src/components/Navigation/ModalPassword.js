@@ -8,7 +8,7 @@ class ModalPassword extends React.Component{
     handleSubmit = (e) => {
         const password = e.target.password.value
         e.preventDefault()
-        fetch('https://desolate-waters-84729.herokuapp.com/update/' + this.props.info.id, {
+        fetch('https://desolate-waters-84729.herokuapp.com/update/' + this.props.info.email, {
             method:'put',
             headers:{'Content-Type' : 'application/json'},
             body:JSON.stringify({

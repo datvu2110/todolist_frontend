@@ -87,7 +87,7 @@ class App extends Component {
   // Call the addItem API
   addItem = (item, id) =>  {
     if (item.todo !== ""){
-      fetch('https://desolate-waters-84729.herokuapp.com/add/' + id, {
+      fetch('https://desolate-waters-84729.herokuapp.com/todo/' + id, {
         method:'post',
         headers:{'Content-Type' : 'application/json'},
         body:JSON.stringify({
