@@ -1,5 +1,5 @@
 input[type=search] { 
-	text-align: right;
+	text-align: center;
 	cursor: pointer;
 	width: 20%; 
 	letter-spacing: 4px;        
@@ -8,6 +8,9 @@ input[type=search] {
 	font-size: 13px;
 }
 
+input {
+	text-align: center;
+}
 @media screen and (max-width:800px){
 	input[type=search]{
 		width: 40%;
